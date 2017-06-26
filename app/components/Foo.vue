@@ -1,22 +1,22 @@
 <template>
     <div>
-        <p class="test">{{ test }}</p>
+        <p>{{ d }}</p>
     </div>
 </template>
 
 <script>
-    const Test = {
-        name: 'Test',
+    const Foo = {
+        name: 'foo',
         data: function () {
             return {
-                test: 'you data...'
+                d: 'Foo view'
             }
         }
     }
 
-    export default Test
+    export default Foo
 </script>
 
 <style scoped>
-    .test { color: blue; }
+
 </style>

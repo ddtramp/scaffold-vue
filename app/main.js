@@ -1,13 +1,12 @@
-import Vue from 'vue/dist/vue.js'
+import Vue from 'vue'
 import App from './App.vue'
-import Test from './components/Test.vue'
+import router from './router'
+
 new Vue({
     el: '#example',
-    data: {
-        message: "Hello Vue"
-    },
+    router,
+    template: '<App>',
     components: {
-        App,
-        Test
+        App
     }
 })

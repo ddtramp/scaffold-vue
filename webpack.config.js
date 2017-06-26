@@ -13,6 +13,11 @@ module.exports = {
         path: path.join(__dirname, '/dist'), // eslint-disable-line
         filename: 'bundle.js'
     },
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js'
+        }
+    },
     module: {
         rules: [
             {

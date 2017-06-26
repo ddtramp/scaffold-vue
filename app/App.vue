@@ -1,27 +1,26 @@
 <template>
-    <div>
-        <div class="message">{{ msg }}</div>
-        <div class="message">Value is: {{ count }}</div>
-        <a href="#" @click.prevent="increment">Increment</a>
+    <div id="message">
+        <h3>{{ message }}</h3>
+        <Test></Test>
+
+        <router-link to="/foo">Go to Foo</router-link>
+        <router-link to="/bar">Go to Bar</router-link>
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
+    import Test from './components/Test.vue'
+
     const App = {
         name: 'App',
         data () {
             return {
-                msg: 'Hello from vue-loader! lalala...',
-                count: 0
+                message: 'lalala...'
             }
         },
-        methods: {
-            increment () {
-                this.count ++;
-            },
-            dd () {
-                return 123
-            }
+        components: {
+            Test
         }
     }
 
@@ -29,7 +28,7 @@
 </script>
 
 <style scoped>
-    .message {
+    #message {
         color: red;
     }
 </style>
